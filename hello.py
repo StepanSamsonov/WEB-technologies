@@ -6,4 +6,4 @@ def wsgi_hello(environ, start_response):
     body = [bytes(i + '\n', 'ascii') for i in environ['QUERY_STRING'].split('&')]
 
     start_response(status, headers)
-    return [body]
+    return body
