@@ -1,7 +1,7 @@
 git config --global user.name StepanSamsonov
 git config --global user.email mynameisericlensherr@gmail.com
 pip install gunicorn
-ln -sf /home/box/web/etc/nginx.conf /etc/nginx/sites-enabled/default
+ln -sf /home/box/web/etc/nginx.conf /etc/nginx/nginx.conf
 /etc/init.d/nginx restart
 
 # cd /home/box/web
