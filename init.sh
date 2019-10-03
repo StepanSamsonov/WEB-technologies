@@ -4,8 +4,8 @@ pip install gunicorn
 ln -sf /home/box/web/etc/nginx.conf /etc/nginx/sites-enabled/default
 /etc/init.d/nginx restart
 
-cd /home/box/web
-sudo gunicorn -c /home/box/web/etc/gunicorn.py hello:wsgi_hello
+# cd /home/box/web
+# sudo gunicorn -c /home/box/web/etc/gunicorn.py hello:wsgi_hello
 cd /home/box/web/ask
 sudo gunicorn -c /home/box/web/etc/gunicorn-django.py ask.wsgi:application
 
