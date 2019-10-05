@@ -19,6 +19,9 @@ class Question(models.Model):
 	author = models.OneToOneField(User, blank=True, null=True)
 	likes = models.ManyToManyField(User, blank=True, related_name='question_like_user')
 
+	def get_url(self):
+		return '/question/'+str(self.id)
+
 class Answer(models.Model):
 	text = models.TextField(blank=True, null=True)
 	added_at = models.DateTimeField(auto_now_add=True, blank=True, null=True)
