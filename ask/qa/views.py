@@ -20,7 +20,8 @@ def page(request):
 
 
 	return render(request, 'page.html', {
-		'questions': questions,
+		'questions': questions
+,
 	})
 
 def popular_page(request):
