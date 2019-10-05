@@ -10,17 +10,19 @@ class QuestionManager(models.Manager):
 		return self.order_by('-rating')
 
 class Question(models.Model):
-	title = models.CharField(max_length=50)
-	text = models.TextField()
-	added_at = models.DateTimeField(auto_now_add=True)
-	raiting = models.IntegerField(default=0)
-	author = models.OneToOneField(User)
-	likes = models.ManyToManyField(User, related_name='question_like_user')
+	objects = QuestionManager()
+
+	title = models.CharField(blank=True, null=True, max_length=50)
+	text = models.TextField(blank=True, null=True)
+	added_at = models.DateTimeField(auto_now_add=True, blank=True, null=True)
+	rating = models.IntegerField(default=0, blank=True, null=True)
+	author = models.OneToOneField(User, blank=True, null=True)
+	likes = models.ManyToManyField(User, blank=True, null=True, related_name='question_like_user')
 
 class Answer(models.Model):
-	text = models.TextField()
-	added_at = models.DateTimeField(auto_now_add=True)
-	question = models.ForeignKey(Question)
-	author = models.ForeignKey(User)
+	text = models.TextField(blank=True, null=True)
+	added_at = models.DateTimeField(auto_now_add=True, blank=True, null=True)
+	question = models.ForeignKey(Question, blank=True, null=True)
+	author = models.ForeignKey(User, blank=True, null=True)
 
 	
