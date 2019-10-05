@@ -92,3 +92,10 @@ Quit the server with CONTROL-C.
 [05/Oct/2019 20:01:58] "GET /?page=1 HTTP/1.1" 200 66
 [05/Oct/2019 20:02:09] "GET / HTTP/1.1" 200 66
 [05/Oct/2019 20:02:18] "GET /?page=1 HTTP/1.1" 200 66
+Performing system checks...
+
+System check identified no issues (0 silenced).
+October 05, 2019 - 20:00:56
+Django version 1.10.5, using settings 'ask.settings'
+Starting development server at http://0.0.0.0:80/
+Quit the server with CONTROL-C.
